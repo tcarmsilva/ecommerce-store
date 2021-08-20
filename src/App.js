@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Routes from './routes';
 
-function App() {
+// import { Button } from 'reactstrap';
+
+// import Headers from './components/Headers';
+// import Footer from './components/Footer';
+// import BarraNav from './components/Navbar';
+
+
+// function App() {
+//   return (
+//     <div className="App">
+//       ola thais
+//     </div>
+//   );
+// }
+
+// class App extends React.Component {
+//   render(){
+//     return (
+//       <div className="App">
+        
+//         <Navbar/>
+//         <Headers/>
+//         <Footer/>
+
+//       </div>
+//     )
+//   }
+// }
+
+function App (props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <BarraNav/>
+      <Headers/>
+      <Footer/>
+      <Button color="danger">Danger!</Button> */}
+      <Routes/>
     </div>
   );
-}
+};
+
 
 export default App;
