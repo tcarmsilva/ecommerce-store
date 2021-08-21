@@ -1,10 +1,37 @@
+// general imports
 import React from 'react';
+import * as S from '../../styled';
+
+// global components import
+import BarraNav from '../../components/global/BarraNav'
+import BottomBar from '../../components/global/BottomBar'
+import Button from '../../components/global/Button'
+import Footer from '../../components/global/Footer'
+import ProfileForm from '../../components/global/ProfileForm'
+
+// page components import
+
+
 
 function Profile () {
     return(
-        <div>               
-            <h1>testedepagina</h1>
-        </div> 
+
+        <S.Container>
+
+            { // componentes que devem aparecer nesta pagina } 
+            }
+            
+            <BarraNav/>
+
+            <ProfileForm/>
+            <Button/>
+          
+            <Footer/>
+            <BottomBar/>
+       
+
+        </S.Container>
+
     );
 };
 
