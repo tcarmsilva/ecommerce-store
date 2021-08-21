@@ -5,27 +5,26 @@ import * as S from '../../styled';
 // global components import
 import BarraNav from '../../components/global/BarraNav'
 import BottomBar from '../../components/global/BottomBar'
-
 import Footer from '../../components/global/Footer'
 import FooterSecurity from '../../components/global/FooterSecurity'
 
 // page components import
-import ProductList from '../../components/home/ProductList'
-import PromoCarrossel from '../../components/home/PromoCarrossel'
+import CategoryList from '../Categories/CategoryList'
 import UpperBar from '../../components/home/UpperBar'
+
 
 // api imports
 import apiFakeStore from '../../apifakestore'
 
 
-class Home extends React.Component {
+class Categories extends React.Component {
     
     state = {
         products: [],
     }
 
-    getProducts = () => {
-        apiFakeStore.getProducts().then((result) => {
+    getCategoriesProducts = () => {
+        apiFakeStore.getCategoriesProducts(this.props.category).then((result) => {
             this.setState({
                 products: result.data,
             })
@@ -35,7 +34,7 @@ class Home extends React.Component {
     }
 
     componentDidMount = () => {
-        this.getProducts()
+        this.getCategoriesProducts()
 
     }
     
@@ -45,15 +44,12 @@ class Home extends React.Component {
 
 
             <S.Container>
-          
+                
                 <BarraNav/>
                 <UpperBar/>
-
-                <PromoCarrossel/>
                 
-                <ProductList allProducts = {this.state.products} />
-                
-            
+                <CategoryList categoryList = {this.state.products} />
+                   
                 <FooterSecurity/>
                 <Footer/>
                 <BottomBar/>
@@ -64,4 +60,4 @@ class Home extends React.Component {
 }};
 
 
-export default Home;
+export default Categories;

@@ -24,37 +24,24 @@ const UpperBar = (props) => {
         return(
             <div>
                 
-                <Navbar color="dark"  expand="md">
+                <Navbar color="dark"  expand="md" className="card text-center">
 
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
-                        <Nav navbar >
+                        <Nav navbar>
 
-                            <NavItem >
-                                <NavLink className="text-light"  href="/components/">Categoria 1</NavLink>
+                            <NavItem>
+                                <NavLink className="text-light mx-6"  href="/categories/electronics">Electronics</NavLink>
                             </NavItem>
                             <NavItem >
-                                <NavLink className="text-light"  href="/components/">Categoria 2</NavLink>
+                                <NavLink className="text-light"  href="/categories/jewelery">Jewelery</NavLink>
                             </NavItem>
                             <NavItem >
-                                <NavLink className="text-light"  href="/components/">Categoria 3</NavLink>
+                                <NavLink className="text-light"  href="/categories/men-clothing">Men clothing</NavLink>
                             </NavItem>
                             <NavItem >
-                                <NavLink className="text-light"  href="/components/">Categoria 4</NavLink>
+                                <NavLink className="text-light"  href="/categories/women-clothing">Women clothing</NavLink>
                             </NavItem>
-                            <NavItem >
-                                <NavLink className="text-light"  href="/components/">Categoria 5</NavLink>
-                            </NavItem>
-                            <NavItem >
-                                <NavLink className="text-light"  href="/components/">Categoria 6</NavLink>
-                            </NavItem>
-                            <NavItem >
-                                <NavLink className="text-light"  href="/components/">Categoria 7</NavLink>
-                            </NavItem>
-                            <NavItem >
-                                <NavLink className="text-light"  href="/components/">Categoria 8</NavLink>
-                            </NavItem>
-
 
                         </Nav>
 

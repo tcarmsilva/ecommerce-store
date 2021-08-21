@@ -5,7 +5,6 @@ import * as S from '../../styled';
 // global components import
 import BarraNav from '../../components/global/BarraNav'
 import BottomBar from '../../components/global/BottomBar'
-import Button from '../../components/global/Button'
 import Footer from '../../components/global/Footer'
 import ProfileForm from '../../components/global/ProfileForm'
 
@@ -24,7 +23,7 @@ function Profile () {
             <BarraNav/>
 
             <ProfileForm/>
-            <Button/>
+        
           
             <Footer/>
             <BottomBar/>

@@ -5,7 +5,6 @@ import * as S from '../../styled';
 // global components import
 import BarraNav from '../../components/global/BarraNav'
 import BottomBar from '../../components/global/BottomBar'
-import Button from '../../components/global/Button'
 import Footer from '../../components/global/Footer'
 import FooterSecurity from '../../components/global/FooterSecurity'
 import ProductCard from '../../components/global/ProductCard'
@@ -30,7 +29,7 @@ function Product () {
             <ProductCard/>
             <TabProductInfo/>
             <Faq/>
-            <Button/>
+       
             <ProfileForm/>
           
             <FooterSecurity/>

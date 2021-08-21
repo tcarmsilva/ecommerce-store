@@ -8,22 +8,22 @@ import {
 class ProductCard extends React.Component{
     render(){
         return(
-            <div class="card text-center">
-                <Card >
+
+                <Card className="card text-center my-3" >
                     <CardBody>
-                        <CardTitle tag="h4">Card title</CardTitle>
+                        <CardTitle tag="h4">{this.props.productInfo.title}</CardTitle>
                     </CardBody>
-                    <CardImg top width="100%" src="/assets/256x186.svg" alt="COLOCAR AQUI O CARROSSEL" />
+                    <CardImg className='w-25 h-50 p-3 mx-auto d-block' src={this.props.productInfo.image} alt={this.props.productInfo.title} />
                     <CardBody>
-                        <CardSubtitle tag="h6" className="mb-2 text-muted"><del>R$ 130,00</del></CardSubtitle>
-                        <CardSubtitle tag="h5" className="mb-2 text-success">R$ 130,00</CardSubtitle>
-                        <CardText>This is a great description of this product.</CardText>
+                        <CardSubtitle tag="h6" className="mb-2 text-muted"><del>R$ {(this.props.productInfo.price*1.5).toFixed(2)}</del></CardSubtitle>
+                        <CardSubtitle tag="h5" className="mb-2 text-success">R$ {(this.props.productInfo.price).toFixed(2)}</CardSubtitle>
+                        <CardText>{this.props.productInfo.description}</CardText>
                         <Button>Click for details</Button>
                     </CardBody>
                 </Card>
                
 
-            </div>
+
         );
     };
 };

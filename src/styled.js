@@ -27,7 +27,8 @@ export const ListItem = styled.li`
 // para usar na div geral do react em cada componente
 export const Container = styled.div` 
     width: 100%;
-    max-width: 991px;
+    max-width: auto;
     margin: 0 auto;
 `;
 
+/* max-width: 991px; */

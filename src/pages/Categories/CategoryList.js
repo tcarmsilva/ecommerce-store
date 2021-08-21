@@ -3,16 +3,16 @@ import {
   Card, Button, CardImg, CardTitle, CardText, CardDeck,
   CardSubtitle, CardBody
 } from 'reactstrap';
-import ProductCard from '../global/ProductCard';
+import ProductCard from '../../components/global/ProductCard';
 
 
 
 
-const ProductList = (props) => {
+const CategoryList = (props) => {
     return (
         <CardDeck className='d-flex flex-wrap justify-content-around' >
             {
-              props.allProducts.map(
+              props.categoryList.map(
                 (product) => {
                   return <ProductCard productInfo = {product}/>
                 }
@@ -27,4 +27,4 @@ const ProductList = (props) => {
   
   
 
-export default ProductList;
+export default CategoryList;
