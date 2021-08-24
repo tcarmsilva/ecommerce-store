@@ -13,7 +13,7 @@ function Routes () {
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Home} />
-                <Route path="/product" component={Product} />
+                <Route path="/product/:id" component={Product} />
                 <Route path="/checkout" component={Checkout} />
                 <Route path="/payment" component={Payment} />
                 <Route path="/profile" component={Profile} />
@@ -24,10 +24,10 @@ function Routes () {
                     return <Categories category='jewelery' {...props}/>
                 }} />
                 <Route path="/categories/men-clothing" render={(props) => {
-                    return <Categories category='menSClothing' {...props}/>
+                    return <Categories category="men's clothing" {...props}/>
                 }} />
                 <Route path="/categories/women-clothing" render={(props) => {
-                    return <Categories category='womens-clothing' {...props}/>
+                    return <Categories category="women's clothing" {...props}/>
                 }} />
             </Switch>
         </BrowserRouter>

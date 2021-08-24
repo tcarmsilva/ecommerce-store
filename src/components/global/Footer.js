@@ -14,7 +14,7 @@ class Footer extends React.Component{
                             <li>Reactstrap</li>
                             <li>Javascript</li>
                             <li>HTML</li>
-                            <li>APIs</li>
+                            <li>APIs: fakestoreapi.com</li>
                             <li>Axios</li>
                         </p>
                         <a href="https://github.com/tcarmsilva/" class="btn btn-light">Go to my Github</a>

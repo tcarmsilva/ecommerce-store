@@ -4,12 +4,13 @@ import {
   Card, Button, CardImg, CardTitle, CardText, CardDeck,
   CardSubtitle, CardBody
 } from 'reactstrap';
+import {Link} from 'react-router-dom';
 
 class ProductCard extends React.Component{
     render(){
         return(
 
-                <Card className="card text-center my-3" >
+                <Card className="card text-center w-50 my-3" >
                     <CardBody>
                         <CardTitle tag="h4">{this.props.productInfo.title}</CardTitle>
                     </CardBody>
@@ -18,7 +19,7 @@ class ProductCard extends React.Component{
                         <CardSubtitle tag="h6" className="mb-2 text-muted"><del>R$ {(this.props.productInfo.price*1.5).toFixed(2)}</del></CardSubtitle>
                         <CardSubtitle tag="h5" className="mb-2 text-success">R$ {(this.props.productInfo.price).toFixed(2)}</CardSubtitle>
                         <CardText>{this.props.productInfo.description}</CardText>
-                        <Button>Click for details</Button>
+                        <Link to={`/product/${this.props.productInfo.id}`}><Button>Click for details</Button></Link>
                     </CardBody>
                 </Card>
                

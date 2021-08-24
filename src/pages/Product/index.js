@@ -1,6 +1,7 @@
 // general imports
 import React from 'react';
 import * as S from '../../styled';
+import apiFakeStore from '../../apifakestore';
 
 // global components import
 import BarraNav from '../../components/global/BarraNav'
@@ -16,30 +17,54 @@ import TabProductInfo from '../../components/product/TabProductInfo'
 
 
 
-function Product () {
-    return(
+class Product extends React.Component {
 
-        <S.Container>
+    state = {
+        product: {},
+    }
 
-            { // componentes que devem aparecer nesta pagina } 
-            }
+    getProduct = (id) => {
+        apiFakeStore.getProduct(id).then((result) => {
+            this.setState({
+                product: result.data,
+            })
+        }).catch((err) => {
+            console.log('erro de puxar da api', err)            
+        });
+    }
 
-            <BarraNav/>
+    componentDidMount = () => {
+        this.getProduct(this.props.match.params.id)
 
-            <ProductCard/>
-            <TabProductInfo/>
-            <Faq/>
-       
-            <ProfileForm/>
-          
-            <FooterSecurity/>
-            <Footer/>
-            <BottomBar/>
-       
+    }
+    
+    render() {
+        return(
 
-        </S.Container>
+            <S.Container>
+    
+                <BarraNav/>
 
-    );
+                {this.state.product.id ? <>
+                    <ProductCard productInfo={this.state.product}/>
+                    {/* <TabProductInfo/>
+                    <Faq/>
+            
+                    <ProfileForm/> */}
+                
+                    <FooterSecurity/>
+                    <Footer/>
+                    <BottomBar/>
+                    
+                    </> : 'loading...'
+                }
+    
+                
+           
+    
+            </S.Container>
+    
+        )}
 };
 
 

@@ -24,7 +24,7 @@ const BarraNav = (props) => {
     return (
       <div>
         <Navbar color="dark"  expand="md">
-          <NavbarBrand className="text-light" href="/">LOGO</NavbarBrand>
+          <NavbarBrand className="text-light" href="/">MY STORE</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
