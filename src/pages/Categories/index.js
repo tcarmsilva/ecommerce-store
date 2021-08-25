@@ -55,9 +55,11 @@ class Categories extends React.Component {
                     
                     <FooterSecurity/>
                     <Footer/>
-                    {/* <BottomBar className='position-fixed fixed-bottom'/> */}
+                    
 
                 </div>
+
+                {/* <BottomBar className='position-fixed fixed-bottom'/> */}
 
             </S.Container>
 
