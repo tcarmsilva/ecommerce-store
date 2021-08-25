@@ -23,17 +23,17 @@ const BarraNav = (props) => {
   
     return (
       <div>
-        <Navbar color="dark"  expand="md">
+        <Navbar color="dark"  expand="md" class="navbar-nav nav-fill w-100">
           <NavbarBrand className="text-light" href="/">MY STORE</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink className="text-light" href="/components/">About</NavLink>
+                <NavLink className="text-light navbar-text" href="/components/">About</NavLink>
               </NavItem>
               
               <NavItem>
-                <NavLink className="text-light" href="/components/">All Products</NavLink>
+                <NavLink className="text-light navbar-text" href="/components/">All Products</NavLink>
               </NavItem>
 
 
@@ -64,10 +64,10 @@ const BarraNav = (props) => {
             </Nav>
 
             <NavItem>
-                <NavLink className="text-light" href="https://github.com/reactstrap/reactstrap">My favorites</NavLink>
+                <NavLink className="text-light navbar-text" href="https://github.com/reactstrap/reactstrap">Profile</NavLink>
             </NavItem>
 
-            <NavbarText className="text-light" >My Cart</NavbarText>
+            <NavbarText className="text-light navbar-text" >Whatsapp</NavbarText>
           
           </Collapse>
         </Navbar>

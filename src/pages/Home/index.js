@@ -4,7 +4,7 @@ import * as S from '../../styled';
 
 // global components import
 import BarraNav from '../../components/global/BarraNav'
-import BottomBar from '../../components/global/BottomBar'
+// import BottomBar from '../../components/global/BottomBar'
 
 import Footer from '../../components/global/Footer'
 import FooterSecurity from '../../components/global/FooterSecurity'
@@ -45,18 +45,23 @@ class Home extends React.Component {
 
 
             <S.Container>
-          
-                <BarraNav/>
-                <UpperBar/>
 
-                <PromoCarrossel/>
+                <div className='position-fixed fixed-top'>
+                    <BarraNav/>
+                    <UpperBar/>
+                </div>
                 
-                <ProductList allProducts = {this.state.products} />
+                <div className='position-relative' style={{top:'130px'}}>
+                    <PromoCarrossel/>
+                    
+                    <ProductList allProducts = {this.state.products} />
+                    
+                    <FooterSecurity/>
+                    <Footer/>
+                    
+                </div>
                 
-            
-                <FooterSecurity/>
-                <Footer/>
-                <BottomBar/>
+                {/* <BottomBar className='fixed-bottom'/> */}
 
             </S.Container>
 

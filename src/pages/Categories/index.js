@@ -4,7 +4,7 @@ import * as S from '../../styled';
 
 // global components import
 import BarraNav from '../../components/global/BarraNav'
-import BottomBar from '../../components/global/BottomBar'
+// import BottomBar from '../../components/global/BottomBar'
 import Footer from '../../components/global/Footer'
 import FooterSecurity from '../../components/global/FooterSecurity'
 
@@ -45,14 +45,19 @@ class Categories extends React.Component {
 
             <S.Container>
                 
-                <BarraNav/>
-                <UpperBar/>
+                <div className='position-fixed fixed-top'>
+                    <BarraNav/>
+                    <UpperBar/>
+                </div>
                 
-                <CategoryList categoryList = {this.state.products} />
-                   
-                <FooterSecurity/>
-                <Footer/>
-                <BottomBar/>
+                <div className='position-relative' style={{top:'130px'}}>
+                    <CategoryList categoryList = {this.state.products} />
+                    
+                    <FooterSecurity/>
+                    <Footer/>
+                    {/* <BottomBar className='position-fixed fixed-bottom'/> */}
+
+                </div>
 
             </S.Container>
 

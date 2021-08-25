@@ -1,51 +1,51 @@
 
-import React, { useState } from 'react';
-import { InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
-  } from 'reactstrap';
+// import React, { useState } from 'react';
+// import { InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
+// import {
+//     Collapse,
+//     Navbar,
+//     NavbarToggler,
+//     NavbarBrand,
+//     Nav,
+//     NavItem,
+//     NavLink,
+//     UncontrolledDropdown,
+//     DropdownToggle,
+//     DropdownMenu,
+//     DropdownItem,
+//     NavbarText
+//   } from 'reactstrap';
   
 
-const BottomBar = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
+// const BottomBar = (props) => {
+//     const [isOpen, setIsOpen] = useState(false);
   
-    const toggle = () => setIsOpen(!isOpen);
+//     const toggle = () => setIsOpen(!isOpen);
   
-    return (
-      <div>
-        <Navbar color="dark"  expand="md">
+//     return (
+//       <div>
+//         <Navbar color="dark"  expand="md">
 
-          <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
-            <Nav navbar >
+//           <NavbarToggler onClick={toggle} />
+//           <Collapse isOpen={isOpen} navbar>
+//             <Nav navbar >
          
-                <NavItem >
-                    <NavLink className="text-light"  href="/components/">Perfil</NavLink>
-                </NavItem>
+//                 <NavItem >
+//                     <NavLink className="text-light"  href="/components/">Perfil</NavLink>
+//                 </NavItem>
 
-                <NavItem>
-                    <NavLink className="text-light" href="https://github.com/reactstrap/reactstrap">Whatsapp</NavLink>
-                </NavItem>
+//                 <NavItem>
+//                     <NavLink className="text-light" href="https://github.com/reactstrap/reactstrap">Whatsapp</NavLink>
+//                 </NavItem>
 
-            </Nav>
+//             </Nav>
           
-          </Collapse>
-        </Navbar>
+//           </Collapse>
+//         </Navbar>
 
 
-      </div>
-    );
-}
+//       </div>
+//     );
+// }
 
-export default BottomBar;
+// export default BottomBar;

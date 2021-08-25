@@ -6,20 +6,23 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import banner1 from '../../images/cool-banner-1.jpg';
+import banner2 from '../../images/cool-banner-2.jpg';
+import banner3 from '../../images/cool-banner-3.jpg';
 
 const items = [
     {
-      src: 'https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg',
+      src: banner1,
       altText: 'BIYLACLESEN Womens 3-in-1 Snowboard Jacket Winter Coats',
       caption: 'BIYLACLESEN Womens 3-in-1 Snowboard Jacket Winter Coats'
     },
     {
-      src: 'https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg',
+      src: banner2,
       altText: 'Lock and Love Womens Removable Hooded Faux Leather Moto Biker Jacket',
       caption: 'Lock and Love Womens Removable Hooded Faux Leather Moto Biker Jacket'
     },
     {
-      src: 'https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg',
+      src: banner3,
       altText: 'Opna Womens Short Sleeve Moisture',
       caption: 'Opna Womens Short Sleeve Moisture'
     }
@@ -54,8 +57,8 @@ const PromoCarrossel = (props) => {
           onExited={() => setAnimating(false)}
           key={item.src}
         >
-          <img src={item.src} alt={item.altText} className='w-25 h-70 p-3 mx-auto d-block bg-secondary'/>
-          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+          <img src={item.src} alt={item.altText} className='h-65 w-100 p-3 mx-auto d-block bg-secondary'/>
+          <CarouselCaption captionText={item.caption} captionHeader={item.caption}/>
         </CarouselItem>
       );
     });

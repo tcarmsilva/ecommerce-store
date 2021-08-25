@@ -4,7 +4,7 @@ import * as S from '../../styled';
 
 // global components import
 import BarraNav from '../../components/global/BarraNav'
-import BottomBar from '../../components/global/BottomBar'
+// import BottomBar from '../../components/global/BottomBar'
 import Footer from '../../components/global/Footer'
 import ProfileForm from '../../components/global/ProfileForm'
 
@@ -20,13 +20,13 @@ function Profile () {
             { // componentes que devem aparecer nesta pagina } 
             }
             
-            <BarraNav/>
+            <BarraNav className='position-fixed fixed-top'/>
 
             <ProfileForm/>
         
           
             <Footer/>
-            <BottomBar/>
+            {/* <BottomBar className='position-fixed fixed-bottom'/> */}
        
 
         </S.Container>

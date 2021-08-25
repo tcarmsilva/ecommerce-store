@@ -5,7 +5,7 @@ import apiFakeStore from '../../apifakestore';
 
 // global components import
 import BarraNav from '../../components/global/BarraNav'
-import BottomBar from '../../components/global/BottomBar'
+// import BottomBar from '../../components/global/BottomBar'
 import Footer from '../../components/global/Footer'
 import FooterSecurity from '../../components/global/FooterSecurity'
 import ProductCard from '../../components/global/ProductCard'
@@ -43,20 +43,26 @@ class Product extends React.Component {
 
             <S.Container>
     
-                <BarraNav/>
+                <BarraNav className='position-fixed fixed-top'/>
 
                 {this.state.product.id ? <>
-                    <ProductCard productInfo={this.state.product}/>
-                    {/* <TabProductInfo/>
-                    <Faq/>
-            
-                    <ProfileForm/> */}
+                    
+                    <div className='d-flex justify-content-center'>
+                        <ProductCard productInfo={this.state.product}/>
+                        {/* <TabProductInfo/>
+                        <Faq/>
                 
-                    <FooterSecurity/>
-                    <Footer/>
-                    <BottomBar/>
+                        <ProfileForm/> */}
+                    
+                    </div>
+
+                        <FooterSecurity/>
+                        <Footer/>
+                        {/* <BottomBar className='position-fixed fixed-bottom'/> */}
                     
                     </> : 'loading...'
+                    
+                    
                 }
     
                 
