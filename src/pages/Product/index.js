@@ -14,6 +14,7 @@ import ProfileForm from '../../components/global/ProfileForm'
 // page components import
 import Faq from '../../components/product/Faq'
 import TabProductInfo from '../../components/product/TabProductInfo'
+import SendForm from '../../components/product/SendForm'
 
 
 
@@ -38,6 +39,7 @@ class Product extends React.Component {
 
     }
     
+
     render() {
         return(
 
@@ -48,11 +50,11 @@ class Product extends React.Component {
                 {this.state.product.id ? <>
                     
                     <div className='d-flex justify-content-center'>
-                        <ProductCard productInfo={this.state.product}/>
+                        <ProductCard productInfo={this.state.product} isProductPage={true}/>
                         {/* <TabProductInfo/>
-                        <Faq/>
+                        <Faq/>*/}
                 
-                        <ProfileForm/> */}
+                        <SendForm/> 
                     
                     </div>
 
