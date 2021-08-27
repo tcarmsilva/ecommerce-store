@@ -20,15 +20,30 @@ class SendForm extends React.Component{
     })
   }
   
-  handleSubmit(e){
-    e.preventDefault()
+  createWhatsappLink(){
+    const {title, price, description} = this.props.productInfo
+    
+    const message = `Link%3A%20$Nome$%3A%20Pre%C3%A7o%3A%20`
+
+    // conferir se esta certo esse link sendo passado 
+    const whatsappLink = `https://api.whatsapp.com/send?phone=55${this.state.phone}&text=Oi%20${this.state.name}!%20%20Vi%20este%20produto%20na%20Thais%20Shop%20e%20lembrei%20de%20vc%20%3AD%20Olha%20aqui%3A%20${message}`
+  
+    return whatsappLink
+  
   }
-
-  // conferir se esta certo esse link sendo passado 
-  const whatsappLink = `https://api.whatsapp.com/send?phone=55${colocaraquionumero}&text=Oi%20${aquionome}!%20Vi%20este%20produto%20na%20Thais%20Shop%20e%20lembrei%20de%20vc%20%3AD%20Olha%20aqui%3A%20Link%3A%20Nome%3A%20Pre%C3%A7o%3A%20`
-
+  
+  handleSubmit(e){
+    this.createWhatsappLink()
+    e.preventDefault()
+    console.log('cliquei no link')
+    window.open('https://www.google.com', '_blank')
+    // o _blank é para abrir em outra aba this.createWhatsappLink()
+    // window.open faz abrir uma nova tab com esse link
+  }
+  
   render(){
-      return(
+    
+    return(
       <Form inline onSubmit={this.handleSubmit}>
         <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
           <Label for="examplePassword" className="mr-sm-2">Friend's name</Label>
@@ -38,7 +53,9 @@ class SendForm extends React.Component{
           <Label for="examplePhone" className="mr-sm-2">Friend's phone</Label>
           <Input value={this.state.phone} onChange={this.handleInput} type="phone" name="phone" id="examplePhone" placeholder="11999999999" />
         </FormGroup>
-        <Link to='{whatsappLink}'><Button>Submit</Button></Link>
+        <Button type='submit'>Send Whatsapp</Button>
+        
+        
       </Form>
     );
   };

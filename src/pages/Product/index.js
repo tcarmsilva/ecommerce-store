@@ -54,7 +54,8 @@ class Product extends React.Component {
                         {/* <TabProductInfo/>
                         <Faq/>*/}
                 
-                        <SendForm/> 
+                        <SendForm productInfo={this.state.product}/>
+                        
                     
                     </div>
 
