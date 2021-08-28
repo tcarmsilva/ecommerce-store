@@ -54,10 +54,12 @@ class Product extends React.Component {
                         {/* <TabProductInfo/>
                         <Faq/>*/}
                 
-                        <SendForm productInfo={this.state.product}/>
+                        
                         
                     
                     </div>
+
+                        <SendForm productInfo={this.state.product}/>
 
                         <FooterSecurity/>
                         <Footer/>

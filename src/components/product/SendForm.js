@@ -20,23 +20,24 @@ class SendForm extends React.Component{
     })
   }
   
-  createWhatsappLink(){
-    const {title, price, description} = this.props.productInfo
+  // createWhatsappLink(){
+  //   const {title, price, description} = this.props.productInfo
     
-    const message = `Link%3A%20$Nome$%3A%20Pre%C3%A7o%3A%20`
+  //   const message = `Link%3A%20$Nome$%3A%20Pre%C3%A7o%3A%20`
 
-    // conferir se esta certo esse link sendo passado 
-    const whatsappLink = `https://api.whatsapp.com/send?phone=55${this.state.phone}&text=Oi%20${this.state.name}!%20%20Vi%20este%20produto%20na%20Thais%20Shop%20e%20lembrei%20de%20vc%20%3AD%20Olha%20aqui%3A%20${message}`
+  //   // conferir se esta certo esse link sendo passado 
+  //   const whatsappLink = `https://api.whatsapp.com/send?phone=55${this.state.phone}&text=Oi%20${this.state.name}!%20Acho%20que%20voc%C3%AA%20gostaria%20de%20um%20produto%20neste%20site%3A%20https://tcarmsilva-ecommerce-store.netlify.app/`
+
+  //   return whatsappLink
   
-    return whatsappLink
-  
-  }
+  // }
   
   handleSubmit(e){
-    this.createWhatsappLink()
+    // const {title, price, description} = this.props.productInfo
+
     e.preventDefault()
     console.log('cliquei no link')
-    window.open('https://www.google.com', '_blank')
+    window.open('https://api.whatsapp.com/send?phone=55${this.state.phone}&text=Oi%20${this.state.name}!%20Acho%20que%20voc%C3%AA%20gostaria%20de%20um%20produto%20neste%20site%3A%20https://tcarmsilva-ecommerce-store.netlify.app/', '_blank')
     // o _blank é para abrir em outra aba this.createWhatsappLink()
     // window.open faz abrir uma nova tab com esse link
   }
@@ -53,7 +54,7 @@ class SendForm extends React.Component{
           <Label for="examplePhone" className="mr-sm-2">Friend's phone</Label>
           <Input value={this.state.phone} onChange={this.handleInput} type="phone" name="phone" id="examplePhone" placeholder="11999999999" />
         </FormGroup>
-        <Button type='submit'>Send Whatsapp</Button>
+        <Button type='submit'>Share with a friend on Whatsapp</Button>
         
         
       </Form>

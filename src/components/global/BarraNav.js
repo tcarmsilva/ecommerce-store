@@ -24,7 +24,7 @@ const BarraNav = (props) => {
     return (
       <div>
         <Navbar color="dark"  expand="md" class="navbar-nav nav-fill w-100">
-          <NavbarBrand className="text-light" href="/">MY STORE</NavbarBrand>
+          <NavbarBrand className="text-light" href="/">THAIS SHOP</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
@@ -32,17 +32,17 @@ const BarraNav = (props) => {
                 <NavLink className="text-light navbar-text" href="/components/">About</NavLink>
               </NavItem>
               
-              <NavItem>
+              {/* <NavItem>
                 <NavLink className="text-light navbar-text" href="/components/">All Products</NavLink>
-              </NavItem>
+              </NavItem> */}
 
-
+{/* 
               <InputGroup>
                 <Input />
                 <InputGroupAddon addonType="append">
                   <Button color="secondary">Search</Button>
                 </InputGroupAddon>
-              </InputGroup>
+              </InputGroup> */}
 
               {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret className="text-light">
@@ -63,11 +63,11 @@ const BarraNav = (props) => {
               </UncontrolledDropdown> */}
             </Nav>
 
-            <NavItem>
+            {/* <NavItem>
                 <NavLink className="text-light navbar-text" href="https://github.com/reactstrap/reactstrap">Profile</NavLink>
-            </NavItem>
+            </NavItem> */}
 
-            <NavbarText className="text-light navbar-text" >Whatsapp</NavbarText>
+            {/* <NavbarText className="text-light navbar-text" >Whatsapp</NavbarText> */}
           
           </Collapse>
         </Navbar>

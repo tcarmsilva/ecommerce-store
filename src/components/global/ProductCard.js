@@ -27,7 +27,7 @@ class ProductCard extends React.Component{
                             this.props.isProductPage ? (
                                 <>
                                     {/* <Button className="mx-3" onClick={this.sendEmail}>Send email</Button> */}
-                                    <Link to={`/product/${this.props.productInfo.id}`}><Button className="mx-3">Send whatsapp</Button></Link>        
+                                    {/* <Link to={`/product/${this.props.productInfo.id}`}><Button className="mx-3">Send whatsapp</Button></Link>         */}
                                 </>
                                  
                             )
